@@ -24,9 +24,9 @@ do
 	httpd24_deny=$httpd24_deny"Require not ip ${ip}\n"
 done
 
-echo -e $httpd_allow > $DocumentRoot/jp/httpd/allow.txt
-echo -e $httpd_deny > $DocumentRoot/jp/httpd/deny.txt
-echo -e $nginx_allow > $DocumentRoot/jp/nginx/allow.txt
-echo -e $nginx_deny > $DocumentRoot/jp/nginx/deny.txt
-echo -e $httpd24_allow > $DocumentRoot/jp/httpd24/allow.txt
-echo -e $httpd24_deny > $DocumentRoot/jp/httpd24/deny.txt
+echo -e $httpd_allow > $DocumentRoot/jp/httpd/allow
+echo -e $httpd_deny > $DocumentRoot/jp/httpd/deny
+echo -e $nginx_allow > $DocumentRoot/jp/nginx/allow
+echo -e $nginx_deny > $DocumentRoot/jp/nginx/deny
+echo -e $httpd24_allow > $DocumentRoot/jp/httpd24/allow
+echo -e $httpd24_deny > $DocumentRoot/jp/httpd24/deny
