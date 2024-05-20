@@ -32,8 +32,9 @@ done
 #echo -e $JPhttpd24_allow > $DocumentRoot/jp/httpd24/allow
 #echo -e $JPhttpd24_deny > $DocumentRoot/jp/httpd24/deny
 
-CloudFrontIPList=$( curl -s https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips | jq '.CLOUDFRONT_REGIONAL_EDGE_IP_LIST[]')
-CloudFrontIPList=($CloutFrontIPList)
+#CloudFrontIPList=$( curl -s https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips | jq '.CLOUDFRONT_REGIONAL_EDGE_IP_LIST[]')
+CloudFrontIPList=$(curl -s https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips | jq '.CLOUDFRONT_REGIONAL_EDGE_IP_LIST[]'|sed s/\"//g)
+CloudFrontIPList=($CloudFrontIPList)
 CFhttpd_allow=$CroudFrontteikei
 CFhttpd_deny=$CrountFrontteikei
 CFnginx_allow=$CroudFrontteikei
